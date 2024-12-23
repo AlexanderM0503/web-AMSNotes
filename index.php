@@ -11,6 +11,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/index.css">
     </head>
 
     <body>
@@ -31,7 +33,7 @@
                     print("<div class='note'>");
                     print("<div class='noteHead'>");
                     print("<p class='noteName'><b>" . basename($notesArray[$i], ".txt") . "</b></p>");
-                    print("<a class='noteAction' href='#'>Удалить</a>");
+                    print("<a class='noteAction' href='#'><img src='img/delete.png' width='25px' height='25px'></a>");
                     print("</div>");
                     print("<div class='noteText'>");
 

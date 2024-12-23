@@ -1,0 +1,30 @@
+.notes {
+    margin: 25px 7px 25px 7px;
+}
+
+.note {
+    margin: 10px 0 10px 0;
+    padding: 5px;
+    transition: background-color .5s;
+}
+
+.note:hover {
+    background-color: #add8e6;
+}
+
+.noteHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.noteName {
+    font-size: 21px;
+    text-decoration: none;
+    color: #000;
+}
+
+.noteText {
+    color: #808080;
+}
