@@ -26,6 +26,30 @@
             </div>
         </header>
 
+        <div class="panel">
+            <input type="button" class="addNote" value="Добавить заметку" onclick="ShowCreateDialog()">
+        </div>
+
+        <dialog class="dialog" id="createDialog">
+            <form action="createNote.php" method="post">
+                <p>Имя заметки:</p>
+                <input type="text" name="crtNoteName">
+                <input type="submit" value="Создать">
+            </form>
+
+            <input type="button" value="Отмена" onclick="CloseCreateDialog()">
+        </dialog>
+
+        <dialog class="dialog" id="deleteDialog">
+            <form action="deleteNote.php" method="post">
+                <p>Вы действительно хотите удалить заметку?</p>
+                <input type="text" id="delNoteName" name="delNoteName" readonly>
+                <input type="submit" value="Удалить">
+            </form>
+
+            <input type="button" value="Отмена" onclick="CloseDeleteDialog()">
+        </dialog>
+
         <div class="notes">
             <?php
                 for ($i = 2; $i < count($notesArray); $i++)
@@ -33,7 +57,7 @@
                     print("<div class='note'>");
                     print("<div class='noteHead'>");
                     print("<p class='noteName'><b>" . basename($notesArray[$i], ".txt") . "</b></p>");
-                    print("<a class='noteAction' href='#'><img src='img/delete.png' width='25px' height='25px'></a>");
+                    print("<input type='image' src='img/delete.png' width='25px' height='25px' onclick='ShowDeleteDialog(\"" . basename($notesArray[$i], ".txt") . "\")'>");
                     print("</div>");
                     print("<div class='noteText'>");
 
@@ -60,5 +84,7 @@
         <footer>
             <p><i><?php print($CONF["copyright"]); ?></i></p>
         </footer>
+
+        <script src="js/main.js"></script>
     </body>
 </html>
