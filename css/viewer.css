@@ -1,0 +1,15 @@
+.toMainPage, .noteHead, .noteText {
+    margin: 25px 0;
+}
+
+.noteHead * {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.noteText {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+}

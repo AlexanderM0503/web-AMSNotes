@@ -54,10 +54,11 @@
             <?php
                 for ($i = 2; $i < count($notesArray); $i++)
                 {
+                    $noteName = basename($notesArray[$i], ".txt");
                     print("<div class='note'>");
                     print("<div class='noteHead'>");
-                    print("<p class='noteName'><b>" . basename($notesArray[$i], ".txt") . "</b></p>");
-                    print("<input type='image' src='img/delete.png' width='25px' height='25px' onclick='ShowDeleteDialog(\"" . basename($notesArray[$i], ".txt") . "\")'>");
+                    print("<a class='noteName' href='viewer.php?name=" . $noteName . "'><b>" . $noteName . "</b></a>");
+                    print("<input type='image' src='img/delete.png' width='25px' height='25px' onclick='ShowDeleteDialog(\"" . $noteName . "\")'>");
                     print("</div>");
                     print("<div class='noteText'>");
 
