@@ -31,9 +31,9 @@
         </div>
 
         <dialog class="dialog" id="createDialog">
-            <form action="createNote.php" method="post">
+            <form action="editor.php" method="post">
                 <p>Имя заметки:</p>
-                <input type="text" name="crtNoteName">
+                <input type="text" name="noteName">
                 <input type="submit" value="Создать">
             </form>
 

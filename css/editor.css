@@ -1,0 +1,9 @@
+.links, .editor {
+    margin: 25px 0;
+}
+
+.editor * {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 18px;
+}
