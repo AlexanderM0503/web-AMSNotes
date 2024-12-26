@@ -41,7 +41,7 @@
         </dialog>
 
         <dialog class="dialog" id="deleteDialog">
-            <form action="deleteNote.php" method="post">
+            <form action="delete.php" method="post">
                 <p>Вы действительно хотите удалить заметку?</p>
                 <input type="text" id="delNoteName" name="delNoteName" readonly>
                 <input type="submit" value="Удалить">
